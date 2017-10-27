@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Seisure Inducer",
+  "description": "Changes the background of every webpage",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["bg.js"]
+  }
+}
