@@ -2,17 +2,24 @@
   "manifest_version": 2,
 
   "name": "Seisure Inducer",
-  "description": "Changes the background of every webpage",
-  "version": "1.0",
+  "description": "WOOO THE BACKGROUND IS FLASHING A BUNCH OF COLORS",
+  "version": "0.1",
+  "author": "YA BOI NEIL",
 
   "browser_action": {
-    "default_popup": "popup.html"
+    "default_popup": "interface.html",
+    "default_title": "HEY THERE BUDDY LOOK AWAY THIS DOESN'T DO NOTHIN'"
   },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["main.js"]
+    }
+  ],
+
   "permissions": [
     "activeTab",
-    "storage"
-  ],
-  "background": {
-    "scripts": ["bg.js"]
-  }
+    "https://ajax.googleapis.com/"
+  ]
 }
